@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block tittle %}
+  <tittle>Login</tittle>
+{% endblock %}
+
+{% block content %}
+    <p class="h2" align="center">Login</p>
+<form method="post" class="jumbotron">
+  {% csrf_token %}
+  <label for="uname">User Name:</label>
+  <input type="text" id="uname" placeholder="User Name"><br>
+  <label for="pass">Password:</label>
+  <input type="password" id="pass" placeholder="Password"><br>
+  <input type="submit" placeholder="Submit">
+</form>
+{% endblock %}
